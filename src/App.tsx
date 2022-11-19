@@ -1,15 +1,15 @@
 import { useState } from 'react'
+import { CardUser } from './components/CardUser'
 import { FormPerfil } from './components/FormPerfil'
+import { HeaderApp } from './components/HeaderApp'
+import { List } from './components/List'
 
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export default  function App() {
   return (
-    <div className="App">
+    <div>
       <FormPerfil />
+      <List/>
     </div>
   )
 }
 
-export default App

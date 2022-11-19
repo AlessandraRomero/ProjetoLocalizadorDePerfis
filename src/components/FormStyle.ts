@@ -1,15 +1,21 @@
 import styled from "styled-components"
 
 export const FormStyle = styled.div`
-    width: 100%;
+    margin: 0;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 20Px
-    align-items: start;
+    }
 
     input{
-    margin: 15px;
+    margin-bottom: 15px;
+    width: 300px;
+    height: 44px;
+    }
+
+    button{
+        background-color: #6A5ACD;
+        color: #ffffff
     }
 }
 `

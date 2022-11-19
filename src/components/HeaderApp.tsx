@@ -1,6 +1,8 @@
 
 export function HeaderApp() {
   return (
-  <div></div>
+   <header>
+     <h1>LOCALIZADOR DE PERFIS</h1>
+   </header>
   )
 }
