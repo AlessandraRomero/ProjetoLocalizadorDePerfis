@@ -6,7 +6,6 @@ export const FormContainer = styled.div`
     justify-content: center;
     align-items: center;
 `
-
 export const FormStyle = styled.div`
     width: 50%;
     margin: 0;
@@ -15,6 +14,8 @@ export const FormStyle = styled.div`
     flex-direction: column;
 
     input{
+        border: 1px solid #A9A9A9;
+        border-radius: 5px;
         margin-bottom: 15px;
         width: 100%;
         height: 44px;
@@ -24,6 +25,7 @@ export const FormStyle = styled.div`
     button{
         width: 100%;
         background-color: #6A5ACD;
+        border-radius: 5px;
         color: #ffffff;
     }
 `

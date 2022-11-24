@@ -14,13 +14,19 @@ export function FormPerfil() {
     if (username) {
       const data = await getUser(username);
       setIsLoadng(false)
-      setUserData(data);
+
+      if (data)
+        setUserData(data);
+      else
+        setUserData({});
+
     }
     else {
       console.log("deu ruim");
+      setUserData({});
     }
   }
-  
+
   return (
     <FormContainer>
       <FormStyle>
