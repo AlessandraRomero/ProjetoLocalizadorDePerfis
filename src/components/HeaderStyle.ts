@@ -9,7 +9,7 @@ export const HeaderStyle = styled.div`
    h3{
     margin-left: 8px;
     color:#6959CD;
-    font-size: 21px;
+    font-size: 20px;
    }
    
 `

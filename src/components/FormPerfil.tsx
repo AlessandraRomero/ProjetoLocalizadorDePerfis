@@ -17,13 +17,15 @@ export function FormPerfil() {
 
       if (data)
         setUserData(data);
-      else
-        setUserData({});
 
+      else
+        setUserData({name: "Usuário não encontrado"});
+
+      console.log("Usuario não encontrado");
     }
     else {
       console.log("deu ruim");
-      setUserData({});
+      setUserData({name: "Usuário não encontrado"});
     }
   }
 
