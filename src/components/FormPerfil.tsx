@@ -2,7 +2,7 @@ import { FormContainer, FormStyle } from './FormStyle';
 import { getUser } from "../api/users";
 import { useState } from 'react';
 import { CardUser } from './CardUser';
-import { BeatLoader } from 'react-spinners'
+import { ClipLoader } from 'react-spinners'
 
 export function FormPerfil() {
   const [username, setUsername] = useState("");
@@ -19,13 +19,11 @@ export function FormPerfil() {
         setUserData(data);
 
       else
-        setUserData({name: "Usuário não encontrado"});
-
-      console.log("Usuario não encontrado");
+        setUserData({ name: "Usuário não encontrado" });
     }
     else {
       console.log("deu ruim");
-      setUserData({name: "Usuário não encontrado"});
+      setUserData({ name: "Usuário não encontrado" });
     }
   }
 
@@ -35,7 +33,10 @@ export function FormPerfil() {
         <input type="text" onChange={(e) => setUsername(e.target.value)} />
         <button onClick={buscar}>Buscar</button>
       </FormStyle>
-      {Object.keys(userData).length !== null ? <CardUser user={userData} /> : null}
+      {isLoading ? <ClipLoader
+        color="#294a65"
+        size={50}
+      /> : <CardUser user={userData} />}
     </FormContainer>
   )
 }
