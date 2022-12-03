@@ -3,6 +3,7 @@ import { getUser } from "../api/users";
 import { useState } from 'react';
 import { CardUser } from './CardUser';
 import { ClipLoader } from 'react-spinners'
+import { CardUserStyle } from './CardUserStyle';
 
 export function FormPerfil() {
   const [username, setUsername] = useState("");
@@ -33,10 +34,12 @@ export function FormPerfil() {
         <input type="text" onChange={(e) => setUsername(e.target.value)} />
         <button onClick={buscar}>Buscar</button>
       </FormStyle>
-      {isLoading ? <ClipLoader
-        color="#294a65"
-        size={50}
-      /> : <CardUser user={userData} />}
+      <CardUserStyle>
+        {isLoading ? <ClipLoader
+          color="#fff"
+          size={50}
+        /> : <CardUser user={userData} />}
+      </CardUserStyle>
     </FormContainer>
   )
 }

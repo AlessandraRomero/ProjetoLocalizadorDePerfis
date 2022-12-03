@@ -21,10 +21,10 @@ export function CardUser({ user }: CardUserProps) {
     })
 
     return (
-        <CardUserStyle>
+        <>
             <img src={user.avatar_url} />
             <h3>{user.name || user.login}</h3>
             <a href={user.html_url}>{textLink}</a>
-        </CardUserStyle>
+        </>
     )
 }
